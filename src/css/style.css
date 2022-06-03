@@ -1,0 +1,114 @@
+/** @format */
+@font-face {
+  font-family: "cairo";
+  src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+  font-family: "cairo", sans-serif;
+}
+
+.top-menu .navbar {
+  font-weight: bold;
+  padding: 0px 100px !important;
+  background-color: #fff !important;
+}
+.top-menu .navbar .navbar-nav li > a {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+.top-menu .navbar .navbar-nav li > a:hover {
+  color: #ff7766 !important;
+  background-color: #eee;
+  border-bottom: 1px solid #ff7766;
+}
+
+.carousel-top .row {
+  display: block !important;
+}
+.carousel-top .carousel {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.carousel-top .carousel .carousel-item img {
+  height: 450px;
+}
+.carousel-top .carousel .carousel-item .overlay {
+  position: absolute;
+  background-color: rgba(65, 155, 155, 0.5);
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.carousel-top .carousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 20px 5px 0px 0px;
+}
+.carousel-top .carousel .carousel-indicators button.active {
+  background-color: #ff7766;
+}
+.carousel-top .carousel .carousel-caption h1 {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.carousel-top .carousel .carousel-caption h4 {
+  width: 60%;
+  color: #eee;
+}
+
+.custom-btn {
+  padding: 10px 20px;
+  color: #ff7766 !important;
+  font-weight: bold !important;
+}
+.custom-btn:hover,
+.custom-btn:focus {
+  color: #eee !important;
+  background-color: #ff7766 !important;
+  border: 1px solid #eee !important;
+}
+
+.who-are-we .custom-paragraph {
+  line-height: 2em;
+}
+.who-are-we .custom-btn-main {
+  padding: 20px;
+  background-color: #ff7766;
+  color: white;
+  font-weight: bold;
+  width: 250px;
+}
+.who-are-we .custom-btn-main:hover {
+  color: #000;
+}
+.who-are-we .company-name {
+  color: #ff7766;
+}
+
+@media (max-width: 991px) {
+  .top-menu .navbar {
+    padding: 0px 20px !important;
+  }
+  .top-menu .navbar .navbar-nav a {
+    border-bottom: none !important;
+    padding-right: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .carousel-top .carousel .carousel-caption h1 {
+    font-size: 30px;
+  }
+  .carousel-top .carousel .carousel-caption h4 {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
