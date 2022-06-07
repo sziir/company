@@ -109,7 +109,18 @@ module.exports = {
             filename: "blog-details.html",
             template: "./src/blog-details.html",
         }),
-        
+        new HtmlWebpackPlugin({
+            filename: "add-blog.html",
+            template: "./src/add-blog.html",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "about.html",
+            template: "./src/about.html",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "contact.html",
+            template: "./src/contact.html",
+        }),
         new MiniCssExtractPlugin({ filename: "css/style.css" }),
         new OptimizeCSSAssetsPlugin({}),
     ],

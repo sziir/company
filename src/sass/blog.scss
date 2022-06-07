@@ -80,3 +80,11 @@
     background-color: #0077b0 ;
   }
 }
+.add-blog {
+  label {
+    &:first-child{
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

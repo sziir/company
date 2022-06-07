@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import '../sass/style.scss';
 import '../css/style.css';
-import '@fortawesome/fontawesome-free/js/all.min';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'webpack-jquery-ui';
 import 'webpack-jquery-ui/css';
 import 'jquery/dist/jquery.min.js';
@@ -22,9 +22,17 @@ $(function () {
             $(this).find('.project-category').show(250);
         }
     );
+    var pathname = window.location.pathname;
+    $('.navbar-nav > li > a[href="' + pathname + '"]').parent().addClass('active');
+
+    if (pathname == '/blog-details.html' || pathname == '/add-blog.html') {
+        $('.navbar-nav > li > a[href="/blog.html"]').parent().addClass('active');
+    }
+    if (pathname == '/project-details.html') {
+        $('.navbar-nav > li > a[href="/projects.html"]').parent().addClass('active');
+    }
+
     let modalId = $('#image-gallery');
-
-
 
             loadGallery(true, 'a.thumbnail');
 
@@ -82,7 +90,12 @@ $(function () {
                     .on('click', function () {
                         updateGallery($(this));
                     });
-            }
+    }
+    
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
 
 });
 var year = new Date().getFullYear();
